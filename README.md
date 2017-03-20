@@ -1,6 +1,6 @@
-# Site for the Mood
+# Сайт для вдохновения! 
 
-[TODO. There will be project description]
+Досупен и на [GitHubPages](https://askanio234.github.io/20_mood/)
 
 # Project Goals
 
