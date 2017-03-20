@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <title>Настроение</title>
-  <script id="quotes_json" type="application/json">
-    [
-      {
-        "phrase": "Кукурузные хлопья - теперь без асбеста!",
-        "signature": "©Неизвестный маркетолог"
-      },
-      {
-        "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
-      },
-      {
-        "phrase": "Вывеска над кафе — '\u003cМы открылись\u003e'. Что-то не так. Где же '\u003c/Мы открылись\u003e'?"
-      },
-      {
-        "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
-      }
-    ]
-  </script>
+  <meta charset="utf-8">
+  <link href="./static/css/main.css" rel="stylesheet">
+  <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+  <header>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </header>
+  <!-- <script id="quotes_json" type="application/json">
+  </script> -->
 </head>
 <body>
+<div class = "container-fluid text-center">
+  <h1>Здесь будут шутки</h1>
+  <p>может быть даже смешные</p>
+  <img src="https://smoldaily.ru/wp-content/uploads/2015/12/1441782395111584154.jpg">
+  <br/>
+    <button class="btn btn-default" id ="newQuote" type="submit">Давай еще!</button>
+    <a href="#" class="btn btn-default" id="tweet"><i class="fa fa-twitter" id ="TwitterIcon" aria-hidden="false"></i>Твитнуть!</a>
+  <div class="quotes text-center">
+    <span class="quote"></span>
+    <span class="author"></span>
+</div>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="./static/js/bootstrap.min.js"></script>
+<script src="./static/js/main.js"></script>
 </body>
 </html>
