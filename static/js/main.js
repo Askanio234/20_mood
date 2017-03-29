@@ -1,10 +1,5 @@
   $(document).ready(function(){
-  var randomQuote;
-  var randomNum;
-  var author;
-  getQuote();
-function getQuote(){
-   var jokes = [
+  var jokes = [
       {
         "phrase": "Кукурузные хлопья - теперь без асбеста!",
         "signature": "©Неизвестный маркетолог"
@@ -17,9 +12,19 @@ function getQuote(){
       },
       {
         "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
+      },
+      {
+        "phrase": "Приходит программист к окулисту. Тот его усаживает напротив таблицы, берет указку: — Читайте! — БНОПНЯ... Доктор, у вас что—то не то с кодировкой!"
+      },
+      {
+        "phrase": "Тонет программист. И во все горло орет: — F1, F1, F1, тьфу ты, помогите, помогите, помогите!!!"
       }
     ]
-
+  var randomQuote;
+  var randomNum;
+  var author;
+  getQuote();
+function getQuote(){
     randomNum = Math.floor(Math.random()*jokes.length);
    randomJoke = jokes[randomNum]
    randomQuote = randomJoke.phrase
@@ -28,17 +33,14 @@ function getQuote(){
    } else {
     author = ""
    }
-  $(".quote").text(randomQuote);
-    $(".author").text(author);
-
- 
-
+  $(".js-quote").text(randomQuote);
+  $(".js-author").text(author);
 }
-    $('#tweet').on("click",function(){
+    $('#js-tweet').on("click", function(){
     window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " + author );
   });
     
-  $("#newQuote").on("click", function(){
+  $("#js-newQuote").on("click", function(){
     getQuote();
   });
   
