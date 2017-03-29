@@ -25,23 +25,23 @@
   var author;
   getQuote();
 function getQuote(){
-    randomNum = Math.floor(Math.random()*jokes.length);
-   randomJoke = jokes[randomNum]
-   randomQuote = randomJoke.phrase
-   if ("signature" in randomJoke) {
+  randomNum = Math.floor(Math.random()*jokes.length);
+  randomJoke = jokes[randomNum]
+  randomQuote = randomJoke.phrase
+  if ("signature" in randomJoke) {
     author = randomJoke.signature
-   } else {
+  } else {
     author = ""
-   }
+  }
   $(".js-quote").text(randomQuote);
   $(".js-author").text(author);
 }
-    $('#js-tweet').on("click", function(){
-    window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " + author );
+  $('#js-tweet').on("click", function(){
+  window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " + author );
   });
     
   $("#js-newQuote").on("click", function(){
-    getQuote();
+  getQuote();
   });
   
 
