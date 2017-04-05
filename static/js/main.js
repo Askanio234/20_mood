@@ -1,4 +1,5 @@
-  $(document).ready(function(){
+  $(document).ready(function() {
+
   var jokes = [
       {
         "phrase": "Кукурузные хлопья - теперь без асбеста!",
@@ -20,29 +21,37 @@
         "phrase": "Тонет программист. И во все горло орет: — F1, F1, F1, тьфу ты, помогите, помогите, помогите!!!"
       }
     ]
+
   var randomQuote;
   var randomNum;
   var author;
   getQuote();
-function getQuote(){
-  randomNum = Math.floor(Math.random()*jokes.length);
-  randomJoke = jokes[randomNum]
-  randomQuote = randomJoke.phrase
-  if ("signature" in randomJoke) {
-    author = randomJoke.signature
-  } else {
-    author = ""
+
+  function getQuote() {
+    randomNum = Math.floor(Math.random()*jokes.length);
+    randomJoke = jokes[randomNum];
+    randomQuote = randomJoke.phrase;
+
+    if ("signature" in randomJoke) {
+      author = randomJoke.signature
+
+    } else {
+      author = ""
+
+    }
+
+    $(".js-quote").text(randomQuote);
+    $(".js-author").text(author);
   }
-  $(".js-quote").text(randomQuote);
-  $(".js-author").text(author);
-}
-  $('#js-tweet').on("click", function(){
-  window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " + author );
+
+  $('#js-tweet').on("click", function() {
+    window.open("https://twitter.com/intent/tweet?text="+randomQuote + " " + author );
+
   });
     
-  $("#js-newQuote").on("click", function(){
-  getQuote();
+  $("#js-newQuote").on("click", function() {
+    getQuote();
+
   });
   
-
 });
