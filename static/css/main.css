@@ -38,3 +38,7 @@ img {
 .btn {
   background-color:white;
 }
+.main-body{
+  height: 100%;
+  width: 100%;
+}
