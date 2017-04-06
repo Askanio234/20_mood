@@ -11,7 +11,9 @@ p {
   font-size:20px;
 }
 img {
-  padding:15px;
+  padding:10px;
+  height:33%;
+  width:33%;
 }
 .quotes {
   width:33%;
