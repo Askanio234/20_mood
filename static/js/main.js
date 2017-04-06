@@ -44,7 +44,7 @@
     $(".js-author").text(author);
   }
 
-  function fixedEncodeURIComponent (str) {
+  function fixedEncodeURIComponent(str) {
     return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
       return '%' + c.charCodeAt(0).toString(16);
 
@@ -52,7 +52,7 @@
   }
 
   $('#js-tweet').on("click", function() {
-    window.open("https://twitter.com/intent/tweet?text=" + fixedEncodeURIComponent(randomQuote) + " " + fixedEncodeURIComponent(author));
+    window.open("https://twitter.com/intent/tweet?text=" + fixedEncodeURIComponent(randomQuote + " " + author));
 
   });
     
